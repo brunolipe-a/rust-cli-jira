@@ -1,8 +1,5 @@
 use anyhow::{Error, Ok};
-use db::JiraDatabase;
-
-mod db;
-mod models;
+use cli_jira::db::JiraDatabase;
 
 fn main() -> Result<(), Error> {
     let json_db = JiraDatabase::new("data/db.json".to_owned());
