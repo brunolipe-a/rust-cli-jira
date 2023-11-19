@@ -28,7 +28,7 @@ impl fmt::Display for RecordStatus {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
             RecordStatus::Open => write!(f, "Open"),
-            RecordStatus::InProgress => write!(f, "InProgress"),
+            RecordStatus::InProgress => write!(f, "In progress"),
             RecordStatus::Resolved => write!(f, "Resolved"),
             RecordStatus::Closed => write!(f, "Closed"),
         }

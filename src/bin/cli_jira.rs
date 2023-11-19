@@ -1,12 +1,12 @@
-use anyhow::{Error, Ok};
-use cli_jira::db::JiraDatabase;
+use anyhow::Error;
+use cli_jira::ui::Prompts;
 
 fn main() -> Result<(), Error> {
-    let json_db = JiraDatabase::new("data/db.json".to_owned());
+    let prompts = Prompts::new();
 
-    let db_state = json_db.read_db()?;
+    let result = (prompts.create_epic)();
 
-    println!("{:?}", db_state);
+    println!("{:?}", result);
 
     Ok(())
 }
